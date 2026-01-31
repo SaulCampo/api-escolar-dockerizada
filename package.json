@@ -1,0 +1,17 @@
+{
+  "name": "api-escolar",
+  "version": "1.0.0",
+  "description": "API REST Escolar: CRUD de estudiantes con búsqueda, filtros y paginación.",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "lint": "echo agrega-eslint-si-deseas"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.6.0"
+  }
+}

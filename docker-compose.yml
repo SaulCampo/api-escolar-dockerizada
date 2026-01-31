@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # Servicio API
+  api:
+    container_name: api-escolar
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/api_escolar
+    depends_on:
+      - mongo
+
+  # Servicio MongoDB
+  mongo:
+    image: mongo:latest
+    container_name: mongo-db
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  mongo_data:
+    driver: local
